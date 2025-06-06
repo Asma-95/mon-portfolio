@@ -1,103 +1,119 @@
-import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
-export default function Home() {
+export default function HomePage() {
+  const tools = [
+    "Figma",
+    "JavaScript",
+    "React",
+    "Next.js",
+    "Tailwind CSS",
+    "TypeScript",
+    "HTML",
+    "CSS",
+  ];
+
+  const experiences = [
+    {
+      title: "Chargée de clientèle",
+      company: "COOLTRA",
+      location: "Barcelone",
+      year: "2016",
+    },
+    {
+      title: "Traductrice",
+      company: "Erasmusu",
+      location: "Télétravail",
+      year: "2018",
+    },
+    {
+      title: "Traductrice",
+      company: "Agriconomie.com",
+      location: "Kremlin-Bicêtre",
+      year: "2018",
+    },
+    {
+      title: "Téléconseillère",
+      company: "DOCAPOST",
+      location: "Louviers",
+      year: "2020-2021",
+    },
+    {
+      title: "Webdesigner",
+      company: "HDM NETWORK",
+      location: "Télétravail",
+      year: "2022",
+    },
+  ];
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-screen flex flex-col items-center justify-center px-6 bg-animated-gradient">
+      <div className="max-w-2xl text-center bg-[#f6ead4]/90 p-8 rounded-lg shadow-lg mt-12">
+        <h1 className="text-5xl font-extrabold mb-4 text-[#a2a595]">
+          Bonjour, je suis <span className="text-[#b4a284]">Asma Derragui</span>
+        </h1>
+        <p className="text-lg mb-6 text-[#a2a595]">
+          Développeuse débutante passionnée par le web.
+        </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <Link href="/projets">
+          <Button className="px-6 py-3 text-base bg-[#b4a284] text-[#f6ead4] hover:bg-[#a2a595] transition-colors">
+            Voir mes projets
+          </Button>
+        </Link>
+      </div>
+
+      {/* Grille 2 colonnes avec items-stretch pour même hauteur */}
+      <div className="grid grid-cols-2 gap-8 max-w-5xl mt-12 w-full items-stretch">
+
+        {/* Outils */}
+        <section className="bg-[#f6ead4]/90 p-8 rounded-lg shadow-lg flex flex-col">
+          <h2 className="text-3xl font-bold text-[#b4a284] mb-6 text-center">Mes outils</h2>
+          <div className="flex flex-wrap justify-center gap-4 max-w-xl mx-auto">
+            {tools.map((tool) => (
+              <span
+                key={tool}
+                className="bg-[#f6ead4]/80 text-[#a2a595] px-4 py-2 rounded-full text-sm font-medium shadow-sm border border-[#b4a284]"
+              >
+                {tool}
+              </span>
+            ))}
+          </div>
+        </section>
+
+        {/* Parcours */}
+        <section className="bg-[#f6ead4]/90 p-8 rounded-lg shadow-lg flex flex-col">
+          <h2 className="text-3xl font-bold text-[#b4a284] mb-4 text-center">Mon parcours</h2>
+          <p className="text-lg leading-relaxed max-w-prose mx-auto text-[#a2a595]">
+            En formation développeuse web front-end, je développe mes compétences en HTML, CSS,
+            JavaScript et frameworks modernes. Je suis enthousiaste à l’idée de contribuer à des
+            projets web innovants tout en continuant à apprendre.
+          </p>
+        </section>
+
+      </div>
+
+      {/* Expérience - s’étend sur 2 colonnes et centrée */}
+      <section
+        className="bg-[#f6ead4]/90 p-8 rounded-lg shadow-lg col-span-2 justify-self-center w-full max-w-3xl flex flex-col mt-12"
+        style={{ minHeight: "320px" }}
+      >
+        <h2 className="text-3xl font-bold text-[#b4a284] mb-6 text-center">Expérience</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-auto text-[#a2a595]">
+          {experiences.map(({ title, company, location, year }) => (
+            <div
+              key={`${title}-${company}`}
+              className="bg-[#f6ead4]/80 rounded-lg shadow-md p-6 flex flex-col justify-between h-40"
+            >
+              <h3 className="text-xl font-semibold text-[#b4a284] mb-2">{title}</h3>
+              <p className="text-sm">
+                {company} | {location}
+              </p>
+              <p className="text-sm mt-auto font-medium">{year}</p>
+            </div>
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+    </main>
   );
 }
