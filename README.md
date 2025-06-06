@@ -12,7 +12,7 @@ Ce portfolio présente mes projets, mon parcours, mes outils, et mes expérience
 
 - [Next.js](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [shadcn/ui](https://ui.shadcn.dev/)
+- [shadcn/ui](https://ui.shadcn.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 
 ## 📁 Structure du site
