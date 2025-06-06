@@ -1,7 +1,7 @@
 export default function ProjetsPage() {
   return (
     <main className="p-6 bg-[#f6ead4] min-h-screen">
-      <h2 className="text-3xl font-semibold mb-8 text-[#a2a595]">Mes projets</h2>
+      <h2 className="text-center text-3xl font-semibold mb-8 text-[#a2a595]">Mes projets</h2>
       <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <li className="bg-white rounded-lg shadow-md p-6 border border-[#b4a284] hover:shadow-lg transition-shadow">
           <h3 className="text-xl font-bold mb-2 text-[#b4a284]">

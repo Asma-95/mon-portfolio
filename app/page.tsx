@@ -49,9 +49,12 @@ export default function HomePage() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-6 bg-animated-gradient">
       <div className="max-w-2xl text-center bg-[#f6ead4]/90 p-8 rounded-lg shadow-lg mt-12">
-        <h1 className="text-5xl font-extrabold mb-4 text-[#a2a595]">
-          Bonjour, je suis <span className="text-[#b4a284]">Asma Derragui</span>
-        </h1>
+      <h1 className="text-5xl font-bold mb-4 text-[#a2a595] text-center">
+  <span>Bonjour,</span>
+  <br />
+  <span className="text-[#b4a284]">je suis Asma Derragui</span>
+</h1>
+
         <p className="text-lg mb-6 text-[#a2a595]">
           Développeuse débutante passionnée par le web.
         </p>
