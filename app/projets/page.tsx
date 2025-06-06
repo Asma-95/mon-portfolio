@@ -15,25 +15,26 @@ export default function ProjetsPage() {
             </a>
           </h3>
           <p className="text-[#a2a595]">
-            Pour ce challenge, j'ai travaillé sur un blog en cours de mise en place. La page
-            d'accueil est disponible, avec un formulaire d'abonnement à la newsletter et un
-            champ de recherche d'articles.
+            Pour ce challenge, j&#39;ai travaillé sur un blog en cours de mise en place. La page
+            d&#39;accueil est disponible, avec un formulaire d&#39;abonnement à la newsletter et un
+            champ de recherche d&#39;articles.
           </p>
         </li>
         <li className="bg-white rounded-lg shadow-md p-6 border border-[#b4a284] hover:shadow-lg transition-shadow">
-  <h3 className="text-xl font-bold mb-2 text-[#b4a284]">
-    <a
-      href="https://github.com/O-clock-Samoussas/S15E05-React-crud-todolist-Asma-95"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="underline hover:text-[#a2a595] transition-colors"
-    >
-      Projet 2 : Todolist
-    </a>
-  </h3>
-  <p className="text-[#a2a595]">Une application de gestion de tâches simple et efficace faite en React.</p>
-</li>
-
+          <h3 className="text-xl font-bold mb-2 text-[#b4a284]">
+            <a
+              href="https://github.com/O-clock-Samoussas/S15E05-React-crud-todolist-Asma-95"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-[#a2a595] transition-colors"
+            >
+              Projet 2 : Todolist
+            </a>
+          </h3>
+          <p className="text-[#a2a595]">
+            Une application de gestion de tâches simple et efficace faite en React.
+          </p>
+        </li>
       </ul>
     </main>
   );
